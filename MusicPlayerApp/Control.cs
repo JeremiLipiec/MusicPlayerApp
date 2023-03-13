@@ -147,13 +147,14 @@ namespace MusicPlayerApp
                 case 9: return "Stopped";
                 case 10: return "Playing";
                 case 11: return "Paused";
-
                 case 12: return "Language";
                 case 13: return "Settings";
                 case 14: return "Add Directory";
                 case 15: return "Save";
                 case 16: return "Dark Mode";
                 case 17: return "No valid paths specified, add in settings";
+                case 18: return "Song list in not empty.\nAre you sure you want to reload songs?";
+                case 19: return "Confirm song reload";
 
                 default: return "n/a";
             }
@@ -173,13 +174,14 @@ namespace MusicPlayerApp
                 case 9: return "Zatrzymano";
                 case 10: return "Odtwarzanie";
                 case 11: return "Wstrzymano";
-
                 case 12: return "Język";
                 case 13: return "Ustawienia";
                 case 14: return "Dodaj Folder";
                 case 15: return "Zapisz";
                 case 16: return "Ciemny Motyw";
                 case 17: return "Brak zadeklarowanych istniejących folderów, dodaj przez ustawienia";
+                case 18: return "Lista piosenek nie jest pusta.\nCzy chcesz załadować piosenki ponownie?";
+                case 19: return "Potwierdź ponowne załadowanie piosenek";
 
                 default: return "n/a";
             }

@@ -312,8 +312,15 @@ namespace MusicPlayerApp
 
         private void loadButton_Click(object sender, EventArgs e) {
             stopbutton_Click(this, new EventArgs());
-            songBank = new MusicBank();
-            InitializeSongs();
+
+            if (songsList.Items.Count <= 0) {
+                songBank = new MusicBank();
+                InitializeSongs();
+                return;
+            } else if (MessageBox.Show(Localization.GetWord(18), Localization.GetWord(19), MessageBoxButtons.YesNo) == DialogResult.Yes) {
+                songBank = new MusicBank();
+                InitializeSongs();
+            }
         }
 
         private void PlaySelected() {

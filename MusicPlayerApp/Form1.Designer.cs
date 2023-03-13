@@ -255,7 +255,7 @@ namespace MusicPlayerApp
             this.playSongButton.ForeColor = System.Drawing.Color.White;
             this.playSongButton.Location = new System.Drawing.Point(359, 393);
             this.playSongButton.Name = "playSongButton";
-            this.playSongButton.Size = new System.Drawing.Size(271, 45);
+            this.playSongButton.Size = new System.Drawing.Size(300, 45);
             this.playSongButton.TabIndex = 4;
             this.playSongButton.Text = "Play Song";
             this.playSongButton.UseVisualStyleBackColor = false;
@@ -430,9 +430,9 @@ namespace MusicPlayerApp
             this.loadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loadButton.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loadButton.ForeColor = System.Drawing.Color.White;
-            this.loadButton.Location = new System.Drawing.Point(636, 393);
+            this.loadButton.Location = new System.Drawing.Point(665, 393);
             this.loadButton.Name = "loadButton";
-            this.loadButton.Size = new System.Drawing.Size(152, 45);
+            this.loadButton.Size = new System.Drawing.Size(123, 45);
             this.loadButton.TabIndex = 17;
             this.loadButton.Text = "Load";
             this.loadButton.UseVisualStyleBackColor = false;
