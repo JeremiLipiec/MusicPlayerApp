@@ -60,6 +60,9 @@ namespace MusicPlayerApp
         }
 
         void GetPaths() {
+            if (!File.Exists(Control.pathsFile))
+                File.Create(Control.pathsFile).Close();
+
             string[] directories = File.ReadAllLines(Control.pathsFile);
             foreach (string path in directories)
                 if (Directory.Exists(path))
