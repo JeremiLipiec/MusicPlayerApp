@@ -34,7 +34,7 @@ namespace MusicPlayerApp
             UpdateLocalization();
             UpdateColors();
 
-            versionLabel.Text = "v1.0.0";
+            versionLabel.Text = "v1.0.1";
 
             MusicPlayer.settings.volume = 1;
             volumeSlider.Value = 1;
@@ -184,11 +184,16 @@ namespace MusicPlayerApp
         }
 
         private void timer1_Tick(object sender, EventArgs e) {
-            currentDurationLabel.Text = MusicPlayer.Ctlcontrols.currentPositionString;
+            if(MusicPlayer.Ctlcontrols.currentItem is null)
+                currentDurationLabel.Text = MusicPlayer.Ctlcontrols.currentPositionString;
+            else if (MusicPlayer.Ctlcontrols.currentPosition > MusicPlayer.Ctlcontrols.currentItem.duration)
+                currentDurationLabel.Text = MusicPlayer.Ctlcontrols.currentItem.durationString;
+            else currentDurationLabel.Text = MusicPlayer.Ctlcontrols.currentPositionString;
+            
             if (currentDurationLabel.Text.Length == 0) {
                 currentDurationLabel.Text = "00:00";
             } else {
-                musicProgressBar2.Value = (int)(MusicPlayer.Ctlcontrols.currentPosition / MusicPlayer.Ctlcontrols.currentItem.duration * 100);
+                musicProgressBar2.Value = Math.Min((int)(MusicPlayer.Ctlcontrols.currentPosition / MusicPlayer.Ctlcontrols.currentItem.duration * 100), 100);
             }
 
             if (MusicPlayer.playState == WMPPlayState.wmppsStopped && !stoppedByUser && looping != LoopMode.None) {
